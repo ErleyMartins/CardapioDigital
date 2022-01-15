@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CardapioDigitalWebAPI.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20220115041522_initial")]
+    [Migration("20220115144551_initial")]
     partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -83,6 +83,9 @@ namespace CardapioDigitalWebAPI.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
+                    b.Property<int>("USR_LOCKED1")
+                        .HasColumnType("INTEGER");
+
                     b.Property<string>("USR_LOGIN1")
                         .IsRequired()
                         .HasColumnType("TEXT");
@@ -103,6 +106,7 @@ namespace CardapioDigitalWebAPI.Migrations
                         new
                         {
                             USR_ID1 = 1,
+                            USR_LOCKED1 = 0,
                             USR_LOGIN1 = "admin",
                             USR_NAME1 = "Administrador",
                             USR_PASSWORD1 = new byte[] { 117, 184, 44, 12, 158, 182, 198, 193, 190, 180, 84, 208, 65, 23, 229, 95 }

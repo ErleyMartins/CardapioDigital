@@ -26,7 +26,7 @@ namespace CardapioDigitalWebAPI.Data
             // Convertendo a Senha para matriz de bytes
             byte[] senha = ASCIIEncoding.ASCII.GetBytes("Admin!@#");
             modelBuilder.Entity<Usuarios>()
-                        .HasData(new Usuarios(1, "admin", new MD5CryptoServiceProvider().ComputeHash(senha), "Administrador"));
+                        .HasData(new Usuarios(1, "admin", new MD5CryptoServiceProvider().ComputeHash(senha), "Administrador", 0));
         }
     }
 }

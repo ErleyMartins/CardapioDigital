@@ -51,3 +51,7 @@ C:\Projetos\CardapioDigital\CardapioDigitalWebAPI\bin\Debug\net6.0\runtimes\win-
 C:\Projetos\CardapioDigital\CardapioDigitalWebAPI\bin\Debug\net6.0\runtimes\win-arm64\native\e_sqlite3.dll
 C:\Projetos\CardapioDigital\CardapioDigitalWebAPI\bin\Debug\net6.0\runtimes\win-x64\native\e_sqlite3.dll
 C:\Projetos\CardapioDigital\CardapioDigitalWebAPI\bin\Debug\net6.0\runtimes\win-x86\native\e_sqlite3.dll
+C:\Projetos\CardapioDigital\CardapioDigitalWebAPI\bin\Debug\net6.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Projetos\CardapioDigital\CardapioDigitalWebAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Projetos\CardapioDigital\CardapioDigitalWebAPI\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Projetos\CardapioDigital\CardapioDigitalWebAPI\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll

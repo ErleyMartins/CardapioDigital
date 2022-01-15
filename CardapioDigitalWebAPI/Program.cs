@@ -1,4 +1,5 @@
 using CardapioDigitalWebAPI.Data;
+using CardapioDigitalWebAPI.Interface;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -9,10 +10,17 @@ builder.Services.AddDbContext<DataContext>(
     x => x.UseSqlite(builder.Configuration.GetConnectionString("DefaultConn"))
 );
 
-builder.Services.AddControllers();
+builder.Services.AddControllers()
+                .AddNewtonsoftJson(opt => opt.SerializerSettings.ReferenceLoopHandling =
+                    Newtonsoft.Json.ReferenceLoopHandling.Ignore);
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+// Interfaces
+builder.Services.AddScoped<IPizzasData, PizzasData>();
+builder.Services.AddScoped<IBebidasData, BebidasData>();
+builder.Services.AddScoped<IUsuariosData, UsuariosData>();
 
 var app = builder.Build();
 

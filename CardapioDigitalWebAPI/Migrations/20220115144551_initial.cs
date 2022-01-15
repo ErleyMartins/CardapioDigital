@@ -16,7 +16,7 @@ namespace CardapioDigitalWebAPI.Migrations
                     BEB_ID1 = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     BEB_NOME1 = table.Column<string>(type: "TEXT", nullable: false),
-                    BEB_DESC1 = table.Column<string>(type: "TEXT", nullable: false),
+                    BEB_DESC1 = table.Column<string>(type: "TEXT", nullable: true),
                     BEB_TIPO1 = table.Column<string>(type: "TEXT", nullable: false),
                     BEB_UM1 = table.Column<string>(type: "TEXT", nullable: false),
                     BEB_VALOR1 = table.Column<decimal>(type: "TEXT", nullable: false)
@@ -51,7 +51,8 @@ namespace CardapioDigitalWebAPI.Migrations
                         .Annotation("Sqlite:Autoincrement", true),
                     USR_LOGIN1 = table.Column<string>(type: "TEXT", nullable: false),
                     USR_PASSWORD1 = table.Column<byte[]>(type: "BLOB", nullable: false),
-                    USR_NAME1 = table.Column<string>(type: "TEXT", nullable: false)
+                    USR_NAME1 = table.Column<string>(type: "TEXT", nullable: false),
+                    USR_LOCKED1 = table.Column<int>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -60,8 +61,8 @@ namespace CardapioDigitalWebAPI.Migrations
 
             migrationBuilder.InsertData(
                 table: "Usuarios",
-                columns: new[] { "USR_ID1", "USR_LOGIN1", "USR_NAME1", "USR_PASSWORD1" },
-                values: new object[] { 1, "admin", "Administrador", new byte[] { 117, 184, 44, 12, 158, 182, 198, 193, 190, 180, 84, 208, 65, 23, 229, 95 } });
+                columns: new[] { "USR_ID1", "USR_LOCKED1", "USR_LOGIN1", "USR_NAME1", "USR_PASSWORD1" },
+                values: new object[] { 1, 0, "admin", "Administrador", new byte[] { 117, 184, 44, 12, 158, 182, 198, 193, 190, 180, 84, 208, 65, 23, 229, 95 } });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
