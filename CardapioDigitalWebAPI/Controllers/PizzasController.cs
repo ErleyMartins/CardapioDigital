@@ -60,8 +60,8 @@ namespace CardapioDigitalWebAPI.Controllers
         public async Task<IActionResult> Post(Pizzas pizzas){
             try
             {
-                 _pizza.Add(pizzas);
-                 if (await _pizza.SaveChangesAsync())
+                _pizza.Add(pizzas);
+                if (await _pizza.SaveChangesAsync())
                     return Ok(pizzas);
             }
             catch (System.Exception ex)
@@ -76,7 +76,7 @@ namespace CardapioDigitalWebAPI.Controllers
         public async Task<IActionResult> Put(int id, Pizzas pizzas){
             try
             {
-                var resultado = _pizza.GetPizzaAsyncById(id);
+                var resultado = await _pizza.GetPizzaAsyncById(id);
                 if (resultado == null) return NotFound("Pizza não encontado!");
 
                  _pizza.Update(pizzas);
@@ -92,15 +92,15 @@ namespace CardapioDigitalWebAPI.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete(int id){
+        public async Task<IActionResult> delete(int id){
             try
             {
-                var pizzas = _pizza.GetPizzaAsyncById(id);
-                if (pizzas == null) return NotFound("Pizza não encontado!");
+                var pizzas = await _pizza.GetPizzaAsyncById(id);
+                if (pizzas == null) return NotFound(new { message = "Pizza não encontado!"});
                 
-                 _pizza.Delete(pizzas);
-                 if (await _pizza.SaveChangesAsync())
-                    return Ok("Pizza deletado com sucesso!");
+                _pizza.Delete(pizzas);
+                if (await _pizza.SaveChangesAsync())
+                    return Ok(new { message = "Pizza deletado com sucesso!"});
             }
             catch (System.Exception ex)
             {
