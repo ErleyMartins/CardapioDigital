@@ -8,8 +8,9 @@ namespace CardapioDigitalWebAPI.Interface
         void Update<T> (T entity) where T : class;
         void Delete<T> (T entity) where T : class;
         Task<bool> SaveChangesAsync();
-        Task<Usuarios> Login(string usr_login, byte[] usr_password);
+        Task<Usuarios> Login(string usr_login, string usr_password);
         Task<Usuarios> GetUsuarioAsyncById(int usr_id);
+        Task<Usuarios> GetUsuarioAsyncByLogin(string usr_login);
         Task<Usuarios[]> GetAllUsuarioAsync();
     }
 }

@@ -32,7 +32,7 @@ namespace CardapioDigitalWebAPI.Data
             _context.Update(entity);
         }
 
-        public async Task<Usuarios> Login(string usr_login, byte[] usr_password)
+        public async Task<Usuarios> Login(string usr_login, string usr_password)
         {
             IQueryable<Usuarios> query = _context.Usuarios;
 
@@ -62,6 +62,17 @@ namespace CardapioDigitalWebAPI.Data
                          .OrderBy(usuarios => usuarios.USR_LOGIN1);
             
             return await query.ToArrayAsync();
+        }
+
+        public async Task<Usuarios> GetUsuarioAsyncByLogin(string usr_login)
+        {
+            IQueryable<Usuarios> query = _context.Usuarios;
+
+            query = query.AsNoTracking()
+                         .OrderBy(usuarios => usuarios.USR_LOGIN1)
+                         .Where(usuarios => usuarios.USR_LOGIN1 == usr_login);
+            
+            return await query.FirstOrDefaultAsync();
         }
     }
 }
