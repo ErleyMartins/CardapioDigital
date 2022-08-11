@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CardapioDigital.API", "CardapioDigital.API\CardapioDigital.API.csproj", "{1423B6FE-323A-4E7A-883F-88126CFC3071}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CardapioDigital.Data", "CardapioDigital.Data\CardapioDigital.Data.csproj", "{3698E83A-8B4D-4363-A121-D4731A4BAF70}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CardapioDigital.Domain", "CardapioDigital.Domain\CardapioDigital.Domain.csproj", "{246CE4E5-3749-4546-9008-9F5D35CA8849}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CardapioDigital.Service", "CardapioDigital.Service\CardapioDigital.Service.csproj", "{AE003C44-020C-460A-BEA6-748D00A1A60D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1423B6FE-323A-4E7A-883F-88126CFC3071}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1423B6FE-323A-4E7A-883F-88126CFC3071}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1423B6FE-323A-4E7A-883F-88126CFC3071}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1423B6FE-323A-4E7A-883F-88126CFC3071}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3698E83A-8B4D-4363-A121-D4731A4BAF70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3698E83A-8B4D-4363-A121-D4731A4BAF70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3698E83A-8B4D-4363-A121-D4731A4BAF70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3698E83A-8B4D-4363-A121-D4731A4BAF70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{246CE4E5-3749-4546-9008-9F5D35CA8849}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{246CE4E5-3749-4546-9008-9F5D35CA8849}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{246CE4E5-3749-4546-9008-9F5D35CA8849}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{246CE4E5-3749-4546-9008-9F5D35CA8849}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE003C44-020C-460A-BEA6-748D00A1A60D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE003C44-020C-460A-BEA6-748D00A1A60D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE003C44-020C-460A-BEA6-748D00A1A60D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE003C44-020C-460A-BEA6-748D00A1A60D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
